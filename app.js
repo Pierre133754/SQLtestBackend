@@ -1,6 +1,6 @@
 import express from 'express'
 
-import { getComments, createComment } from './database.js';
+/* import { getComments, createComment } from './database.js'; */
 
 const app = express()
 app.use(express.json())
@@ -12,7 +12,7 @@ app.use((req, res, next) => {
     next();
 });
 
-app.get('/comments', async (req, res) => {
+/* app.get('/comments', async (req, res) => {
     const comments = await getComments()
     res.send(comments)
 })
@@ -21,6 +21,11 @@ app.post('/comments', async (req, res) => {
     const { user, comment } = req.body
     const result = await createComment(user, comment)
     res.status(201).send(String(result))
+})
+ */
+
+app.use((req, res) => {
+    res.send('ok')
 })
 
 app.listen(8080, () => {

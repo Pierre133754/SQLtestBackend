@@ -1,4 +1,4 @@
-import mysql from 'mysql2'
+/* import mysql from 'mysql2'
 import dotenv from 'dotenv'
 
 dotenv.config()
@@ -19,4 +19,4 @@ export async function createComment(user, comment) {
     const [result] = await pool.query('insert into comments (user, comment) values (?, ?)', [user, comment])
     return result.insertId
 }
-
+ */
