@@ -23,6 +23,10 @@ app.post('/comments', async (req, res) => {
     res.status(201).send(String(result))
 })
 
+app.get('/', (req, res) => {
+    res.send("ok")
+})
+
 app.listen(8080, () => {
     console.log('Server is running on port 8080')
 })
