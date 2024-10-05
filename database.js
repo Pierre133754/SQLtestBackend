@@ -11,7 +11,7 @@ const pool = mysql.createPool({
 }).promise()
 
 export async function getComments() {
-    const [rows] = await pool.query('select * from comments')
+    const [rows] = await pool.query('select * from comments order by id desc')
     return rows
 }
 
